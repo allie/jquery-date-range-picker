@@ -1949,14 +1949,7 @@
                 return '<div class="month-element">' + nameMonth(date.get('month')) + '</div>';
             }
 
-            range = [
-                startDate && date.isSame(startDate, 'year') ? startDate.get('month') : 0,
-                date ? date.get('month') : 11
-            ];
-
-            if (range[0] === range[1]) {
-                return '<div class="month-element">' + nameMonth(date.get('month')) + '</div>';
-            }
+            range = [0, 11];
 
             return generateSelect(
                 'month',
